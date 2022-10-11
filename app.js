@@ -6,18 +6,24 @@ let currentValue = '';
 const numbers = document.querySelectorAll('.number')
 const operators = document.querySelectorAll('.operator')
 const allClear = document.querySelector('.clear')
-const equals = document.querySelectorAll('equals')
-const delete = document.querySelectorAll('.delete')
-const previousDisplay = document.querySelectorAll('.previous')
-const currentDisplay = document.querySelectorAll('.current')
+const equals = document.querySelector('.equals')
+const deleteNum = document.querySelector('.delete')
+const previousDisplay = document.querySelector('.previous')
+const currentDisplay = document.querySelector('.current')
 
-numbers.forEach((number) => number.addEventListener('click', (e) => {
-    handleNumber(e.target.textContent);
+numbers.forEach((number) => number.addEventListener('click',(e) => {
+    handleNumber(e.target.textContent)
     currentDisplay.textContent = currentValue;
 }))
 
+operators.forEach((operator) => operator.addEventListener('click', (e) => {
+    handleOperator()
+} ))
+
 function handleNumber(num) {
-    if(currentValue.length <=)
-    //currentValue += num;
-    console.log(num)
+    currentValue += num;
+}
+
+function handleOperator(operator) {
+    
 }
